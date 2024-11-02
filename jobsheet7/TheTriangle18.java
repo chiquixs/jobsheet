@@ -10,16 +10,16 @@ public class TheTriangle18 {
         System.out.print("input some number : ");
         numInput = input.nextInt();
 
-        // while (i < numInput) {
+        while (i < numInput) {
+            s -= "* ";
+            System.out.println(s);
+            i--;
+        }
+
+        // for (i = 0; i <numInput; i++) {
         //     s += " *";
         //     System.out.println(s);
-        //     i++;
         // }
-
-        for (i = 0; i <numInput; i++) {
-            s += " *";
-            System.out.println(s);
-        }
 
     }
 }
