@@ -18,7 +18,7 @@ public class AverageValue18 {
             }
             averageScore = totalScore / 5;
             i++;
-            System.out.print("the average score of student " + i + " is " + averageScore);
+            System.out.print("the average score of student is " + averageScore);
             System.out.println(" ");
         }
     }
