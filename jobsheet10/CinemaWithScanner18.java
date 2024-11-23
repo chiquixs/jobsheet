@@ -1,88 +1,109 @@
 import java.util.Scanner;
-public class CinemaWithScanner18 {
+
+public class cinemaWithScanner18 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         String[][] audience = new String[4][2];
         String name, next;
-        int row, coloumn, option;
+        int row, column, option;
 
-        System.out.println("------welcome to cinemaxx------");
-        System.out.println("please enter your identity and seat");
-
+        System.out.println("------ Welcome to Cinemaxx ------");
 
         while (true) {
-        System.out.println("Menu:");
-        System.out.println("1. Input audience data");
-        System.out.println("2. Show audience list");
-        System.out.println("3. Exit");
-        System.out.print("what do you need today (1-3): ");
-        option = sc.nextInt();
-        sc.nextLine(); 
+            System.out.println("Menu:");
+            System.out.println("1. Input audience data");
+            System.out.println("2. Show audience list");
+            System.out.println("3. Exit");
+            System.out.print("What do you need today (1-3): ");
+            option = sc.nextInt();
+            sc.nextLine();
 
-        switch (option) {
-            case 1:     
-                for (int i = 0; i < audience.length; i++) {
-                    for (int j = 0; j < audience[i].length; j++){
-                        System.out.print("enter a name : ");
+            switch (option) {
+                case 1:
+                    while (true) {
+                        System.out.print("Enter a name: ");
                         name = sc.nextLine();
-                        System.out.print("enter row number : ");
+                        System.out.print("Enter row number (1-4): ");
                         row = sc.nextInt();
-                        System.out.print("enter coloumn number : ");
-                        coloumn = sc.nextInt();
-                        System.out.println("are there any other audiences to be added? (y/n): ");
-                        next = sc.nextLine();
+                        System.out.print("Enter column number (1-2): ");
+                        column = sc.nextInt();
+                        sc.nextLine();
 
-                        if (row < 1 || row > 4 || coloumn < 1 || coloumn > 2) {
-                            System.out.println("please enter row from 0-4 and coloumn from 0-2");
-                        } else if (audience[row - 1][coloumn - 1] != null) {
-                            System.out.println("he selected seat is already occupied by other audiences");
-                        } else {
-                            audience[row - 1][coloumn - 1] = name;
-                            System.out.println("your booking is success!");
+                        if (row < 1 || row > 4 || column < 1 || column > 2) {
+                            System.out.println(
+                                    "your seat is not avalaible. please enter a valid row (1-4) and column (1-2).");
+                            System.out.print("enter row : ");
+                            row = sc.nextInt();
+                            System.out.print("enter coloumn : ");
+                            column = sc.nextInt();
+                            if (row > 0 || row < 5 || column > 0 || column < 3) {
+                                audience[row - 1][column - 1] = name;
+                                System.out.println("your booking is successfull!");
 
-                            System.out.println("are there any audience to be added? (y/n) : ");
+                            } else if (row < 1 || row > 4 || column < 1 || column > 2) {
+                                System.out.println(
+                                        "your seat is not avalaible. please enter a valid row (1-4) and column (1-2).");
+                            }
+                            System.out.print("Are there any other audiences to be added? (y/n): ");
                             next = sc.nextLine();
-
                             if (next.equalsIgnoreCase("n")) {
                                 break;
                             }
-                        
-                    
+
+                        } else if (audience[row - 1][column - 1] != null) {
+                            System.out.println(
+                                    "The selected seat is already occupied by another audience. please enter again");
+                            System.out.print("enter row : ");
+                            row = sc.nextInt();
+                            System.out.print("enter coloumn : ");
+                            column = sc.nextInt();
+                            if (audience[row - 1][column - 1] != null) {
+                                audience[row - 1][column - 1] = name;
+                                System.out.println("your booking is successfull!");
+                            }
+                            System.out.print("Are there any other audiences to be added? (y/n): ");
+                            next = sc.nextLine();
+                            if (next.equalsIgnoreCase("n")) {
+                                break;
+                            }
+
+                        } else {
+                            audience[row - 1][column - 1] = name;
+                            System.out.println("Your booking is successful!");
+                        }
+
+                        System.out.print("Are there any other audiences to be added? (y/n): ");
+                        next = sc.nextLine();
+                        if (next.equalsIgnoreCase("n")) {
+                            break;
                         }
                     }
-                
-                }
-       
-                break;
-            }
+                    break;
 
-            case 2 : 
-            System.out.println(" Audience List:");
-            for (int i = 0; i < audience.length; i++) {
-                for (int j = 0; j < audience[i].length; j++) {
-                    String seat = audience[i][j] != null ? audience[i][j] : "Empty";
-                    System.out.printf("Row %d, Column %d: %s%n", i + 1, j + 1, seat);
-                }
-            }
-            break;
+                case 2:
 
-            case 3:
-                    
+                    System.out.println("\nAudience List:");
+                    for (int i = 0; i < audience.length; i++) {
+                        for (int j = 0; j < audience[i].length; j++) {
+                            if (audience[i][j] == null) {
+                                System.out.print("***\t");
+                            } else {
+                                System.out.print(audience[i][j] + "\t");
+                            }
+
+                        }
+                        System.out.println();
+                    }
+                    break;
+
+                case 3:
+
                     System.out.println("Exiting the program. Thank you!");
-                    sc.close();
-                    return;
 
                 default:
                     System.out.println("Invalid choice. Please enter a number between 1 and 3.");
-
-
-
-
-
-
-
+            }
         }
     }
-    
 }
