@@ -31,13 +31,12 @@ public class cinemaWithScanner18 {
                         sc.nextLine();
 
                         if (row < 1 || row > 4 || column < 1 || column > 2) {
-                            System.out.println(
-                                    "your seat is not avalaible. please enter a valid row (1-4) and column (1-2).");
+                            System.out.println( "your seat is not avalaible. please enter a valid row (1-4) and column (1-2).");
                             System.out.print("enter row : ");
                             row = sc.nextInt();
                             System.out.print("enter coloumn : ");
                             column = sc.nextInt();
-                            if (row > 0 || row < 5 || column > 0 || column < 3) {
+                            if (row > 0 && row < 5 && column > 0 && column < 3) {
                                 audience[row - 1][column - 1] = name;
                                 System.out.println("your booking is successfull!");
 
@@ -100,6 +99,7 @@ public class cinemaWithScanner18 {
                 case 3:
 
                     System.out.println("Exiting the program. Thank you!");
+                    break;
 
                 default:
                     System.out.println("Invalid choice. Please enter a number between 1 and 3.");
