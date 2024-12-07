@@ -53,26 +53,19 @@ public class pracitcAssignment2 {
         return weekIndex;
     }
 
-    public static int findStudentWithHighestGrade(int[][] grades, int numStudents) {
+    public static int studentWithHighestGrade(int[][] grades, int numStudents) {
         int highestTotalGrade = 0;
         int studentIndex = -1;
-
-      
         for (int i = 0; i < numStudents; i++) {
-            int totalGrade = 0;
-
-            
+            int totalGrade = 0;           
             for (int j = 0; j < grades[i].length; j++) {
                 totalGrade += grades[i][j];
-            }
-
-           
+            }           
             if (totalGrade > highestTotalGrade) {
                 highestTotalGrade = totalGrade;
                 studentIndex = i; 
             }
         }
-
         return studentIndex; 
     }
 
@@ -87,7 +80,7 @@ public class pracitcAssignment2 {
         int numWeeks = sc.nextInt();
 
         student = new String[numStudents];
-        int[][] placeFix = new int[numStudents][numWeeks];
+        int placeFix[][] = new int[numStudents][numWeeks];
 
 
         sc.nextLine();
@@ -97,7 +90,7 @@ public class pracitcAssignment2 {
         int weekIndex = highestWeek(placeFix, numWeeks, numStudents);
         System.out.println("Week with the highest total score: Week " + (weekIndex + 1));
 
-        int studentIndex = findStudentWithHighestGrade(placeFix, numStudents);
+        int studentIndex = studentWithHighestGrade(placeFix, numStudents);
         System.out.println("Student with the highest total grade: " + student[studentIndex]);
         System.out.println("Grades for each week: ");
         for (int j = 0; j < numWeeks; j++) {
