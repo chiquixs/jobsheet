@@ -31,22 +31,57 @@ public class studyCase1 {
     
      static void inputAchievement(){
         Scanner sc= new Scanner(System.in);
-        System.out.println("Name of Student : ");
-        String name = sc.nextLine();
-        System.out.println("NIM of Student : ");
-        int nim = sc.nextInt();
-        System.out.println("Achievemnt Type :");
-        String achievement = sc.nextLine();
-        System.out.println("Level of Achievemt : ");
-        String level = sc.nextLine();
-        System.out.println("Year of Achievement : ");
-        int year = sc.nextInt();
+        for (int i = 0; i < nameStudent.length; i++){
+            System.out.println("Name of Student : ");
+            nameStudent[i][1] = sc.nextLine();
+            System.out.println("NIM of Student : ");
+            int nim = sc.nextInt();  
+            nameStudent[i][2] = String.valueOf(nim);
+            System.out.println("Achievemnt Type :");
+            nameStudent[i][3] = sc.nextLine();
+            sc.nextLine();
+            while (true) {
+                System.out.println("level of achivement :");
+                String level = sc.nextLine();
+                if (level.equalsIgnoreCase("Local") || level.equalsIgnoreCase("National") || level.equalsIgnoreCase("International")) {
+                    nameStudent[i][4] = level;
+                    break;
+                } else {
+                    System.out.println("invalin input, please enter again");
+                }
+            }
+          
 
-        nameStudent = [name][0];
-
+            while (true) {
+                System.out.println("enter year (2010 - 2024) : ");
+                int year = sc.nextInt();
+                if (year >= 2010 && year <= 2024) {
+                    nameStudent[i][5] = String.valueOf(year);
+                    break;
+                } else {
+                    System.out.println("invalid year, please enter again");
+                }
+                
+            }
+    
+        }        
      }
 
+     static void inputAchievement2(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Level of Achievemt (Local/National/International) : ");
+        String level = sc.nextLine();
+            if (level.equalsIgnoreCase("Local") || level.equalsIgnoreCase("National") || level.equalsIgnoreCase("International")) {
+                inputAchievement2();
+            } 
+    }
 
+    static void inputAchievement3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Year of Achievement (2010-2024): ");
+        int year = sc.nextInt();
+
+    }
 
     
     // static void inputAchievement (){
