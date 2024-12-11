@@ -96,9 +96,9 @@ public class studyCase {
                 System.out.println("Year of Achievement: " + nameStudent[i][4]);
                 System.out.println("-----------------------------");
 
-            } else if (!hasData) {
-                System.out.println("No achievement data available.");
-
+            } 
+            if (!hasData) {
+                System.out.println("No achievement data available.");   
             }
         }
     }
