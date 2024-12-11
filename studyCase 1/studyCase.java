@@ -1,7 +1,8 @@
 import java.util.Scanner;
+
 public class studyCase {
 
-    static String[][] nameStudent = new String[5][5];
+    static String[][] nameStudent = new String[100][5];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -40,29 +41,29 @@ public class studyCase {
         Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < nameStudent.length; i++) {
-            if (nameStudent[i][0] == null) { 
+            if (nameStudent[i][0] == null) {
                 System.out.print("Name of Student: ");
                 nameStudent[i][0] = sc.nextLine();
 
                 System.out.print("NIM of Student: ");
-                int nim = sc.nextInt();
+                long nim = sc.nextLong();
                 nameStudent[i][1] = String.valueOf(nim);
-                sc.nextLine(); 
+                sc.nextLine();
 
                 System.out.print("Achievement Type: ");
                 nameStudent[i][2] = sc.nextLine();
 
-               
                 while (true) {
                     System.out.print("Level of Achievement (Local/National/International): ");
                     String level = sc.nextLine();
-                    if (level.equalsIgnoreCase("Local") || level.equalsIgnoreCase("National") || level.equalsIgnoreCase("International")) {
+                    if (level.equalsIgnoreCase("Local") || level.equalsIgnoreCase("National")
+                            || level.equalsIgnoreCase("International")) {
                         nameStudent[i][3] = level;
                         break;
                     } else {
                         System.out.println("Invalid input. Please enter again.");
                     }
-                } 
+                }
 
                 while (true) {
                     System.out.print("Enter Year (2010 - 2024): ");
@@ -75,17 +76,17 @@ public class studyCase {
                         System.out.println("Invalid year. Please enter again.");
                     }
                 }
-                break; 
+                break;
             }
         }
     }
 
     static void ShowAllAchievements() {
         System.out.println("=== All Achievements ===");
-        boolean hasData = false; 
+        boolean hasData = false;
 
         for (int i = 0; i < nameStudent.length; i++) {
-            if (nameStudent[i][0] != null) { 
+            if (nameStudent[i][0] != null) {
                 hasData = true;
                 System.out.println("Student " + (i + 1) + ":");
                 System.out.println("Name: " + nameStudent[i][0]);
@@ -94,21 +95,22 @@ public class studyCase {
                 System.out.println("Level of Achievement: " + nameStudent[i][3]);
                 System.out.println("Year of Achievement: " + nameStudent[i][4]);
                 System.out.println("-----------------------------");
+
+            } else if (!hasData) {
+                System.out.println("No achievement data available.");
+
             }
         }
-
-        if (!hasData) {
-            System.out.println("No achievement data available.");
-        }
     }
-    static void AchievementAnalysisbyType(){
+
+    static void AchievementAnalysisbyType() {
         Scanner sc = new Scanner(System.in);
         System.out.print("enter achievement type : ");
         String achievemntType = sc.nextLine();
         System.out.println("--- ANALYST OF ACHIEVEMENT ---");
         Boolean found = true;
 
-        for (int i = 0; i < nameStudent.length; i++){
+        for (int i = 0; i < nameStudent.length; i++) {
             if (nameStudent[i][2].equals(achievemntType)) {
                 System.out.print("name : " + nameStudent[i][0] + " | ");
                 System.out.print("NIM : " + nameStudent[i][1] + " | ");
@@ -118,11 +120,11 @@ public class studyCase {
                 found = false;
                 System.out.println();
                 break;
-               
+
             } else {
                 System.out.println("Achievement Type cannot found");
-            }       
-            break;         
-        } 
+            }
+            break;
+        }
     }
 }
