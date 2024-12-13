@@ -1,6 +1,5 @@
 import java.util.Scanner;
-
-public class studyCase {
+public class casestudy {
 
     static String[][] nameStudent = new String[100][5];
 
@@ -57,7 +56,7 @@ public class studyCase {
                     System.out.print("Level of Achievement (Local/National/International): ");
                     String level = sc.nextLine();
                     if (level.equalsIgnoreCase("Local") || level.equalsIgnoreCase("National")
-                            || level.equalsIgnoreCase("International")) {
+                        || level.equalsIgnoreCase("International")) {
                         nameStudent[i][3] = level;
                         break;
                     } else {
@@ -87,7 +86,7 @@ public class studyCase {
 
         for (int i = 0; i < nameStudent.length; i++) {
             if (nameStudent[i][0] != null) {
-                hasData = true;
+                hasData = true; 
                 System.out.println("Student " + (i + 1) + ":");
                 System.out.println("Name: " + nameStudent[i][0]);
                 System.out.println("NIM: " + nameStudent[i][1]);
@@ -95,36 +94,32 @@ public class studyCase {
                 System.out.println("Level of Achievement: " + nameStudent[i][3]);
                 System.out.println("Year of Achievement: " + nameStudent[i][4]);
                 System.out.println("-----------------------------");
-
-            } 
-            if (!hasData) {
-                System.out.println("No achievement data available.");   
             }
+        }
+        if (!hasData) {
+            System.out.println("\nNo achievement data available.");
         }
     }
 
     static void AchievementAnalysisbyType() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("enter achievement type : ");
-        String achievemntType = sc.nextLine();
-        System.out.println("--- ANALYST OF ACHIEVEMENT ---");
-        Boolean found = true;
+        System.out.print("Enter achievement type : ");
+        String achievementType = sc.nextLine();
+        System.out.println("=== ANALYST OF ACHIEVEMENT ===");
+        Boolean found = false;
 
         for (int i = 0; i < nameStudent.length; i++) {
-            if (nameStudent[i][2].equals(achievemntType)) {
+            if (nameStudent[i][0] != null && nameStudent[i][2].equalsIgnoreCase(achievementType)) {
                 System.out.print("name : " + nameStudent[i][0] + " | ");
                 System.out.print("NIM : " + nameStudent[i][1] + " | ");
                 System.out.print("Level : " + nameStudent[i][3] + " | ");
                 System.out.print("Year : " + nameStudent[i][4] + " | ");
-
-                found = false;
                 System.out.println();
-                break;
-
-            } else {
-                System.out.println("Achievement Type cannot found");
+                found = true;
+                }
+            } 
+            if (!found) {
+                System.out.println("\nAchievement Type cannot found");
             }
-            break;
         }
     }
-}
