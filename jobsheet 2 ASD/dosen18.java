@@ -32,9 +32,10 @@ void tampilInformasi(){
 void setStatusAktif(boolean status){
     if (statusAktif == status) {
         System.out.println("status anda sudah benar!!");
-    } else {
-        statusAktif = status;
     }
+    // } else {
+    //     statusAktif = status;
+    // }
 }
 
 int hitungMasaKerja(int thnSkrg){
