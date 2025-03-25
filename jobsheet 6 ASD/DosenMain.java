@@ -5,7 +5,7 @@ public class DosenMain{
         Scanner sc = new Scanner(System.in);
         DataDosen listDosen = new DataDosen();
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 3; i++){
             System.out.println("Masukkan data dosen ke- " + (i+1));
             System.out.print("Kode    : ");
             String kode = sc.nextLine();
@@ -24,20 +24,34 @@ public class DosenMain{
             
         }
         
-        System.out.println("Data dosen awal yang belum diurutkan : ");
-        listDosen.tampil();
+        // System.out.println("Data dosen awal yang belum diurutkan : ");
+        // listDosen.tampil();
 
-        System.out.println("Data dosen yang telah diurutkan berdasarkan usia termuda ke tertua dengan bubble sort :");
-        listDosen.bubbleSort();
-        listDosen.tampil();
+        // System.out.println("Data dosen yang telah diurutkan berdasarkan usia termuda ke tertua dengan bubble sort :");
+        // listDosen.bubbleSort();
+        // listDosen.tampil();
 
-        System.out.println("Data dosen yang telah diurutkan berdasarkan usia tertua ke termuda dengan selection sort : ");
-        listDosen.SelectionSort();
-        listDosen.tampil();
+        // System.out.println("Data dosen yang telah diurutkan berdasarkan usia tertua ke termuda dengan selection sort : ");
+        // listDosen.SelectionSort();
+        // listDosen.tampil();
 
-        System.out.println("Data dosen yang telah diurutkan berdasarkan usia tertua ke termuda dengan insertion sort : ");
-        listDosen.InsertionSort();
-        listDosen.tampil();
+        // System.out.println("Data dosen yang telah diurutkan berdasarkan usia tertua ke termuda dengan insertion sort : ");
+        // listDosen.InsertionSort();
+        // listDosen.tampil();
+
+        System.out.print("masukkan nama dosen yang ingin dicari : ");
+        String cariNama = sc.nextLine();
+        listDosen.PencarianDataSequential18(cariNama);
+
+        System.out.println();
+        System.out.println("============================================");
+        System.out.println();
+
+        System.out.print("masukkan usia dosen yang ingin dicari : ");
+        int cariUsia = sc.nextInt();
+        listDosen.PencarianDataBinary18(cariUsia);
+
+
 
     }
 }

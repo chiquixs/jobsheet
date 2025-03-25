@@ -25,4 +25,6 @@ public class Dosen{
         System.out.println("Jenis Kelamin : " + getJenisKelaminAsString());
         System.out.println("Usia : " + usia);
     }
+
+    
 }
