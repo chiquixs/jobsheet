@@ -13,5 +13,7 @@ public class StackKonversi18{
         return top == -1;
     }
 
-    public boolean is
+    public boolean isFull(){
+        return top == size -1;
+    }
 }

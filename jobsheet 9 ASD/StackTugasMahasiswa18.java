@@ -75,7 +75,7 @@ public class StackTugasMahasiswa18{
         return top+1;
     }
 
-    public String konversiDesimalKeBiner(int nilai){
-        StackKonversi stack = new 
-    }
+    // public String konversiDesimalKeBiner(int nilai){
+    //     StackKonversi18 stack = new StackKonversi18();
+    // }
 }
