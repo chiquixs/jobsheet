@@ -40,14 +40,14 @@ public class MahasiswaBerprestasi18 {
     
     public void SelectionSort(){
         for (int i = 0; i < listMhs.length - 1; i++){
-            int idxMin = i;
+            int idxMin = i; //menyimpan mahasiswa dg index terkecil
             for (int j = i + 1; j < listMhs.length; j++){
                 if (listMhs[j].ipk < listMhs[idxMin].ipk) {
                     idxMin = j;
                 }
             }
             Mahasiswa18 tmp = listMhs[idxMin];
-            listMhs[idxMin] = listMhs[i];
+            listMhs[idxMin] = listMhs[i]; //proses ganti ipk terkecil ke barisan paling awal dan nuker sama nilai sebelumnya
             listMhs[i] = tmp;
         }
     }
@@ -108,7 +108,7 @@ public class MahasiswaBerprestasi18 {
 
     public int findBinarySearch(double cari, int left, int right){
         int mid;
-        if (right >= left) {
+        if (right >= left) { //data di right itu ada, jadi bisa dicari karna right > left
             mid = (left + right) / 2;
             if (cari == listMhs[mid].ipk) {
                 return (mid);
