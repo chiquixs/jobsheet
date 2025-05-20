@@ -91,17 +91,17 @@ public class AntrianLayananMahasiswa {
                     System.out.println("-----------------------------------------------------");
                     System.out.println(" ");
                     break;
-
-                case 7:
+                
+                case    7:
                     System.out.println("\n--- KOSONGKAN ANTRIAN ---");
                     antrean.clear();
                     System.out.println("Antrian berhasil dikosongkan!");
                     System.out.println("-----------------------------------------------------");
                     System.out.println(" ");
                     break;
-
-                case 8:
-                     System.out.println("\n--- JUMLAH MAHASISWA DALAM ANTRIAN ---");
+                
+                case    8:
+                    System.out.println("\n--- JUMLAH MAHASISWA DALAM ANTRIAN ---");
                     System.out.println("Jumlah mahasiswa dalam antrian: " + antrean.size());
                     System.out.println("-----------------------------------------------------");
                     System.out.println(" ");

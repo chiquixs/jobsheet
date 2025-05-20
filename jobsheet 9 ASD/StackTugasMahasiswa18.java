@@ -1,12 +1,12 @@
 public class StackTugasMahasiswa18{
     Mahasiswa18[] stack;
-    int top;
-    int size;
+    int top;    // data paling atas
+    int size;   
     
-    StackTugasMahasiswa18(int size){
+    StackTugasMahasiswa18(int size){ // minta panjang array
         this.size = size;
         stack = new Mahasiswa18[size];
-        top = -1;
+        top = -1; //kalo -1 brati gaada data
 
     }
 
@@ -19,7 +19,7 @@ public class StackTugasMahasiswa18{
     }
 
     public boolean isEmpty(){
-        if (top == -1) {
+        if (top == -1) { //indikator -1 karena nilai default dari top
             return true;
         } else {
             return false;

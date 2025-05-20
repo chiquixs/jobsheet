@@ -12,7 +12,7 @@ public class mahasiswaLayanan {
         this.keperluan = keperluan;
     }
 
-     public String toString(){
+    public String toString(){
         return nama + "\t" + nim + "\t" + prodi + "\t" + keperluan;
         
     }

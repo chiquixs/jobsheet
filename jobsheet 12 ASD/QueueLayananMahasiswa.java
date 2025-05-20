@@ -58,11 +58,11 @@ public class QueueLayananMahasiswa {
         return rear.data;
     }
 
-     public boolean isFull() {
+    public boolean isFull() {
         return false;
     }
 
-     public void clear() {
+    public void clear() {
         front = null;
         rear = null;
         size = 0;

@@ -16,12 +16,11 @@ public class MahasiswaDemo18{
             System.out.println("6. Melihat jumlah data");
             System.out.print("Pilih : ");
             pilih = scan.nextInt();
-             scan.nextLine();
+            scan.nextLine();
             switch (pilih) {
                 case 1:
                     System.out.print("Nama : ");
                     String nama = scan.nextLine();
-                   
                     System.out.print("NIM : ");
                     String nim = scan.nextLine();
                     System.out.print("Kelas : ");
