@@ -9,7 +9,7 @@ void main() {
   double nilaiUnikNIM = 20.0; 
 
   // 2. variabel & tipe data (list harga barang)
-  List<double> hargaBarang = [50000.0, 50000.0, 35000.0, 35000.0, 30000.0]; // bisa merubah data harga dengan merubah list harga disini
+  List<double> hargaBarang = [10000.0, 10000.0, 5000.0, 5000.0, 3000.0]; // bisa merubah data harga dengan merubah list harga disini
   
   // menambahkan nilaiUnikNIM sebagai elemen ke 6
   hargaBarang.add(nilaiUnikNIM);
