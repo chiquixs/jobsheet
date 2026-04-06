@@ -45,7 +45,6 @@ A new Flutter project.
 
 Selesaikan Praktikum 2 dan Anda wajib menjalankan aplikasi hello_world pada perangkat fisik (device Android/iOS) agar Anda mempunyai pengalaman untuk menghubungkan ke perangkat fisik. Capture hasil aplikasi di perangkat, lalu buatlah laporan praktikum pada file README.md
 <p align="center">
-  <img src="images/10.jpeg" width="270">
-  <img src="images/11.jpeg" width="270">
-  <img src="images/12.jpeg" width="270">
+  <img src="images/10.jpeg" width="280">
+  <img src="images/12.jpeg" width="280">
 </p>
