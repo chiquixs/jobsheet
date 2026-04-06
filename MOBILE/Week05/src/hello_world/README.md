@@ -30,3 +30,7 @@ This code displays an input form using the TextField widget in Flutter. The Text
 
 9. ![alt text](images/09.png)
 This code represents a Flutter application that implements a Date Picker feature for selecting a date. The selected date is stored in the selectedDate variable and updated using setState when a new date is chosen through the showDatePicker function. The interface displays the selected date along with a “Pilih Tanggal” button to open the date picker dialog. Additionally, the selected date value is printed to the console when the button is pressed
+-------------------------------------------
+
+Selesaikan Praktikum 2 dan Anda wajib menjalankan aplikasi hello_world pada perangkat fisik (device Android/iOS) agar Anda mempunyai pengalaman untuk menghubungkan ke perangkat fisik. Capture hasil aplikasi di perangkat, lalu buatlah laporan praktikum pada file README.md
+![alt text](images/10.jpeg) ![alt text](images/11.jpeg) ![alt text](images/12.jpeg)
